@@ -9,18 +9,22 @@ contract MultiSigFactory {
         address indexed walletAddress
     );
 
-    mapping(string => MutiSigWallet) public deployedWallets;
+    mapping(string => address) public deployedWallets;
 
     function createWallet(
         string memory _walletName,
         address[] memory _owners,
         uint _numConfirmationsRequired
     ) public {
+        require(
+            deployedWallets[_walletName] == address(0),
+            "WalletName AlreadyExist"
+        ); //to ensure that no duplicate Wallet Addresses Exist
         MutiSigWallet wallet = new MutiSigWallet(
             _owners,
             _numConfirmationsRequired
         );
-        deployedWallets[_walletName] = wallet;
+        deployedWallets[_walletName] = address(wallet);
         emit WalletDeployed(_walletName, address(wallet));
     }
 }
