@@ -158,4 +158,8 @@ contract MutiSigWallet {
             transaction.numAuthorization
         );
     }
+
+    function AddressIsOwner(address _address) public view returns (bool) {
+        return isOwner[_address];
+    }
 }
