@@ -13,6 +13,8 @@ async function main() {
 
   const transactionReceipt = await multiSigFactory.deployTransaction.wait(1);
 
+  console.log("Deployed Transaction is ", multiSigFactory.deployTransaction);
+
   console.log(
     `Transaction Successful deployed at Address ${multiSigFactory.address}`
   );
