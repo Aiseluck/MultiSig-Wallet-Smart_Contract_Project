@@ -3,6 +3,12 @@ pragma solidity ^0.8.17;
 
 import "./multiSig.sol";
 
+/**
+ * @title This smart contract serves as MultiSig Wallet Factory that deploys MultiSig Wallet on Chain and stores a list of it
+ * @author Contract Developed by Arasomwan Aisosa Goodluck,
+ *
+ */
+
 contract MultiSigFactory {
     event WalletDeployed(
         string indexed walletName,
