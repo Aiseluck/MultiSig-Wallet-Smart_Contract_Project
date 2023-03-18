@@ -36,7 +36,7 @@ In our `scripts` folder, There lives some essential scripts
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/multisig-contract.git
+git clone https://github.com/Aiseluck/MultiSig-Wallet-Project
 ```
 
 2. Install dependencies:
